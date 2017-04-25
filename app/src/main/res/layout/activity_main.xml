@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.example.twinkle.drquery.MainActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/home"
+        android:id="@+id/dr_image"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="having query?"
+        android:textSize="24dp"
+        android:layout_below="@id/dr_image"
+        android:paddingTop="20sp"
+        android:textColor="#142C6A"
+       android:textAlignment="center"
+        android:background="#FFFFFF"
+        android:id="@+id/query"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/query"
+        android:id="@+id/progressBar"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:text="get started"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:theme="@style/AppTheme.Button"
+        android:layout_below="@id/progressBar"/>
+
+
+
+</RelativeLayout>

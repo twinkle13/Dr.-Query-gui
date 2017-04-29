@@ -2,8 +2,11 @@ package com.example.twinkle.drquery;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.ProgressBar;
+
+import com.example.twinkle.drquery.vaibhav.MachineLearning.ScoreCalculator;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 //    Button b1;
@@ -14,9 +17,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        b1=(Button)findViewById(R.id.button);
-        spinner=(ProgressBar)findViewById(R.id.progressBar);
-        spinner.setVisibility(View.GONE);
-        startSpinner();
+        //spinner=(ProgressBar)findViewById(R.id.progressBar);
+       // spinner.setVisibility(View.GONE);
+        //startSpinner();
+        try {
+            new ScoreCalculator(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
 //        b1.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -25,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
     }
-    private void startSpinner()
+    /*private void startSpinner()
     {
         spinner.setVisibility(View.VISIBLE);
-    }
+    }*/
 }

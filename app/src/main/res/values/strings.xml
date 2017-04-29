@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Dr. Query</string>
+    <string name="app_intro">A Predictive and Personalized Drug Query System</string>
 </resources>
